@@ -13,6 +13,7 @@ export class CardContainerComponent implements OnInit {
 
   pokemons: PokemonData[] = [];
   maxItems: number = 12;
+  hideButton: boolean = false;
 
   constructor(
     private pokeService: PokeApiService,
@@ -30,6 +31,7 @@ export class CardContainerComponent implements OnInit {
       this.getListData(favItems);
     }
     if (value === 'favorites') {
+      this.hideButton = true;
       this.getFavstData(favItems);
     }
     this.sortPokemons();

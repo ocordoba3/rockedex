@@ -63,30 +63,6 @@ b {
     padding: 0.4rem 0.8rem;
 }
 
-.primary-button,
-.secondary-button {
-    border: none;
-    border-radius: 0.8rem;
-    font-size: 1.6rem;
-    font-weight: bolder;
-    padding: 1rem 1.5rem;
-}
-
-.primary-button {
-    background-color: #EF4444;
-    color: #fff;
-    height: fit-content;
-}
-
-.primary-button:disabled {
-    opacity: .6;
-}
-
-.secondary-button {
-    background-color: #E5E7EB;
-    color: #000;
-}
-
 .fav-badge {
     font-size: 1rem;
     padding: .3rem .6rem;

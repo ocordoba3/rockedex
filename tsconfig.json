@@ -2,6 +2,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "PkmButton": [
+        "dist/pkm-button/pkm-button",
+        "dist/pkm-button"
+      ],
+      "PkmFavButton": [
+        "dist/pkm-fav-button/pkm-fav-button",
+        "dist/pkm-fav-button"
+      ],
+      "PkmTopBar": [
+        "dist/pkm-top-bar/pkm-top-bar",
+        "dist/pkm-top-bar"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

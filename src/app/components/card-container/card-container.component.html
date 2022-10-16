@@ -3,6 +3,6 @@
         <app-card [pokemon]="item" (pokemonId)="checkPokemon($event)"></app-card>
     </div>
 </div>
-<div class="text-center mb-5">
-    <button (click)="getMoreData()" type="button" class="secondary-button">VER MÁS</button>
+<div class="text-center mb-5" *ngIf="!hideButton">
+    <PkmButton (click)="getMoreData()" [text]="'VER MÁS'" [pkmType]="'default'"></PkmButton>
 </div>

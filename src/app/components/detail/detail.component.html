@@ -14,9 +14,12 @@
         <h3><b>ID:</b> {{changeId(pokemon.id)}}</h3>
         <h3><b>Altura:</b> {{pokemon.height}}</h3>
         <h3><b>Peso:</b> {{pokemon.weight}}</h3>
-        <button type="button" class="primary-button w-100" [disabled]="pokemon.checked" (click)="checkPokemon(pokemon.id)">
-          {{pokemon.checked ? 'AGREGADO A FAVORITOS' : 'AGREGAR A FAVORITOS'}}
-        </button>
+        <PkmButton 
+          [text]="pokemon.checked ? 'AGREGADO A FAVORITOS' : 'AGREGAR A FAVORITOS'" 
+          [fullWidth]="true"
+          [pkmType]="'primary'" 
+          (click)="checkPokemon(pokemon.id)" [disabled]="pokemon.checked">
+        </PkmButton>
       </div>
     </div>
   </div>

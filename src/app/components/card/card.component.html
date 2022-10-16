@@ -1,5 +1,5 @@
 <div class="card" *ngIf="pokemon">
-    <i [ngClass]="{'fa-regular': !pokemon.checked, 'fa-solid': pokemon.checked}" class=" fa-heart card-fav" (click)="checkPokemon(pokemon.id)"></i>
+    <PkmFavButton (click)="checkPokemon(pokemon.id)" [checked]="pokemon.checked"></PkmFavButton>
     <div class="row">
         <div class="col-md-4 d-flex justify-content-center aling-items-center p-0">
             <img [src]="pokemon.sprites.front_default" class="card-image img-fluid rounded-start"

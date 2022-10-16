@@ -10,6 +10,6 @@
     </div>
     <div class="col-12 col-md-5 header-search_container" *ngIf="viewSelected === 'list'">
         <input [(ngModel)]="inputSearch" class="header-input_search" type="text" placeholder="Busca un Pokemón" (keydown.enter)="searchPokemon()">
-        <button [attr.pkmType]="'primary'" class="primary-button">BUSCAR</button>
+        <PkmButton [text]="'BUSCAR'" [pkmType]="'primary'" (click)="searchPokemon()"></PkmButton>
     </div>
 </div>

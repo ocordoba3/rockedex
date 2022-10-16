@@ -8,6 +8,9 @@ import { CardContainerComponent } from './components/card-container/card-contain
 import { CardComponent } from './components/card/card.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PkmButtonModule } from 'projects/pkm-button/src/public-api';
+import { PkmFavButtonModule } from '../../projects/pkm-fav-button/src/lib/pkm-fav-button.module';
+import { PkmTopBarModule } from '../../projects/pkm-top-bar/src/lib/pkm-top-bar.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { HeaderComponent } from './components/header/header.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PkmButtonModule,
+    PkmFavButtonModule,
+    PkmTopBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

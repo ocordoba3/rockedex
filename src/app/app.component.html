@@ -1,13 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <img src="assets/logo.svg" alt="Rockedex Logo">
-    <!-- <i class="fa-regular fa-heart card-fav"></i> -->
-    <div class="position-relative">
-      <i class="fa-solid fa-heart card-fav" (click)="goToFavs()"></i>
-      <span *ngIf="favItems > 0" class="fav-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        {{favItems}}
-      </span>
-    </div>
-</nav>
+<PkmTopBar [logo]="logo"></PkmTopBar>
 <app-header ></app-header>
 <app-card-container *ngIf="viewSelected === 'list' || viewSelected === 'favorites'"></app-card-container>
 <app-detail *ngIf="viewSelected === 'detail'" [pokemon]="pokemon"></app-detail>

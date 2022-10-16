@@ -11,19 +11,12 @@ export class AppComponent implements OnInit {
 
   viewSelected: View = 'list';
   pokemon: PokemonData = new PokemonData();
-  favItems: number = 0;
+  logo: string = 'assets/logo.svg';
 
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
     this.appService.viewSelected.subscribe((value) => this.viewSelected = value);
     this.appService.pokemonDetail.subscribe((pokemon) => this.pokemon = pokemon);
-    this.appService.favCount.subscribe((value) => this.favItems = value );
-    this.appService.runGetFavCount();
   }
-
-  goToFavs() {
-    this.appService.runRefresView('favorites');
-  }
-
 }

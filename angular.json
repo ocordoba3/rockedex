@@ -100,6 +100,99 @@
           }
         }
       }
+    },
+    "PkmButton": {
+      "projectType": "library",
+      "root": "projects/pkm-button",
+      "sourceRoot": "projects/pkm-button/src",
+      "prefix": "oc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pkm-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pkm-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pkm-button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pkm-button/src/test.ts",
+            "tsConfig": "projects/pkm-button/tsconfig.spec.json",
+            "karmaConfig": "projects/pkm-button/karma.conf.js"
+          }
+        }
+      }
+    },
+    "PkmTopBar": {
+      "projectType": "library",
+      "root": "projects/pkm-top-bar",
+      "sourceRoot": "projects/pkm-top-bar/src",
+      "prefix": "oc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pkm-top-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pkm-top-bar/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pkm-top-bar/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pkm-top-bar/src/test.ts",
+            "tsConfig": "projects/pkm-top-bar/tsconfig.spec.json",
+            "karmaConfig": "projects/pkm-top-bar/karma.conf.js"
+          }
+        }
+      }
+    },
+    "PkmFavButton": {
+      "projectType": "library",
+      "root": "projects/pkm-fav-button",
+      "sourceRoot": "projects/pkm-fav-button/src",
+      "prefix": "oc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pkm-fav-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pkm-fav-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pkm-fav-button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pkm-fav-button/src/test.ts",
+            "tsConfig": "projects/pkm-fav-button/tsconfig.spec.json",
+            "karmaConfig": "projects/pkm-fav-button/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "rockedex"
