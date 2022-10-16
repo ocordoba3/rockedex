@@ -1,0 +1,17 @@
+.card-image {
+    cursor: pointer;
+}
+.card {
+    position: relative;
+}
+.card-fav {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        padding: 1.2rem;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="detail-container" *ngIf="pokemon">
+  <div class="col-12 col-md-6 d-flex justify-content-center aling-items-center">
+    <img [src]="pokemon.sprites.front_default" class="detail-image img-fluid rounded-start" [alt]="pokemon.name">
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="text-center">{{pokemon.name | titlecase}}</h1>
+        <div class="row d-flex m-0 justify-content-center">
+          <span *ngFor="let item of pokemon?.types" class="card-badge">{{item?.type?.name | titlecase}}</span>
+        </div>
+        <h3 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam, aspernatur iusto
+          pariatur assumenda officia maxime eum dolores nostrum velit.</h3>
+        <h3><b>ID:</b> {{changeId(pokemon.id)}}</h3>
+        <h3><b>Altura:</b> {{pokemon.height}}</h3>
+        <h3><b>Peso:</b> {{pokemon.weight}}</h3>
+        <button type="button" class="primary-button w-100" [disabled]="pokemon.checked" (click)="checkPokemon(pokemon.id)">
+          {{pokemon.checked ? 'AGREGADO A FAVORITOS' : 'AGREGAR A FAVORITOS'}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

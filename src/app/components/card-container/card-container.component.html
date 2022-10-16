@@ -1,0 +1,8 @@
+<div class="card-container">
+    <div class="card-container_item" *ngFor="let item of pokemons">
+        <app-card [pokemon]="item" (pokemonId)="checkPokemon($event)"></app-card>
+    </div>
+</div>
+<div class="text-center mb-5">
+    <button (click)="getMoreData()" type="button" class="secondary-button">VER MÁS</button>
+</div>

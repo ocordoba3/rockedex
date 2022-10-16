@@ -1,0 +1,98 @@
+* {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #F3F4F6;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 1.4rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: .7rem;
+}
+
+i {
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+b {
+    font-size: inherit;
+}
+
+.card {
+    border-radius: 0.8rem;
+    border: none;
+    padding: 1.2rem 2.4rem;
+}
+
+.card-badge {
+    background-color: #E5E7EB;
+    border-radius: 0.4rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    padding: 0.4rem 0.8rem;
+}
+
+.primary-button,
+.secondary-button {
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    padding: 1rem 1.5rem;
+}
+
+.primary-button {
+    background-color: #EF4444;
+    color: #fff;
+    height: fit-content;
+}
+
+.primary-button:disabled {
+    opacity: .6;
+}
+
+.secondary-button {
+    background-color: #E5E7EB;
+    color: #000;
+}
+
+.fav-badge {
+    font-size: 1rem;
+    padding: .3rem .6rem;
+}
+
+.card-badge {
+    width: auto;
+    margin: .8rem .5rem .8rem 0;
+}

@@ -1,0 +1,15 @@
+<div class="header-container">
+    <div class="col-auto d-flex align-items-center" *ngIf="viewSelected !== 'list'">
+        <i class="fa-solid fa-arrow-left" (click)="goBack()"></i>
+    </div>
+    <div class="col-12 col-md-7 d-flex align-items-center" *ngIf="viewSelected === 'list'">
+        <h1 class="header-title">Pokemones</h1>
+    </div>
+    <div class="col-12 col-md-7 ms-4 d-flex align-items-center" *ngIf="viewSelected === 'favorites'">
+        <h1 class="header-title">Favoritos</h1>
+    </div>
+    <div class="col-12 col-md-5 header-search_container" *ngIf="viewSelected === 'list'">
+        <input [(ngModel)]="inputSearch" class="header-input_search" type="text" placeholder="Busca un Pokemón" (keydown.enter)="searchPokemon()">
+        <button [attr.pkmType]="'primary'" class="primary-button">BUSCAR</button>
+    </div>
+</div>

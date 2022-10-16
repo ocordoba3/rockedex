@@ -1,0 +1,20 @@
+.detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0rem 9rem 2.5rem 9rem;
+}
+
+.card-badge {
+    margin: 1.6rem .5rem 1.6rem 0;
+}
+
+@media screen and (max-width: 767px) {
+    .detail-container {
+        padding: 0rem 1.8rem 2.5rem 1.8rem;
+    }
+    .card {
+        margin-top: 2rem;
+        padding: 1.2rem;
+    }
+}

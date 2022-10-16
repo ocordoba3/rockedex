@@ -1,0 +1,18 @@
+<div class="card" *ngIf="pokemon">
+    <i [ngClass]="{'fa-regular': !pokemon.checked, 'fa-solid': pokemon.checked}" class=" fa-heart card-fav" (click)="checkPokemon(pokemon.id)"></i>
+    <div class="row">
+        <div class="col-md-4 d-flex justify-content-center aling-items-center p-0">
+            <img [src]="pokemon.sprites.front_default" class="card-image img-fluid rounded-start"
+                [alt]="pokemon.name" (click)="goToDetail(pokemon)">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body p-0">
+                <p>{{changeId(pokemon.id)}}</p>
+                <h2><b>{{pokemon.name | titlecase}}</b></h2>
+                <div class="row d-flex m-0">
+                    <span *ngFor="let item of pokemon?.types" class="card-badge">{{item?.type?.name | titlecase}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

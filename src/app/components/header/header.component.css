@@ -1,0 +1,41 @@
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2.5rem 9rem;
+}
+
+.header-title {
+    font-weight: bolder;
+}
+
+.header-search_container {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: end;
+}
+
+.header-input_search {
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+    padding: 1rem 1.5rem;
+    width: 90%;
+    height: fit-content;
+}
+
+@media screen and (max-width: 767px) {
+    .header-container {
+        padding: 1.8rem;
+    }
+    .header-search_container {
+        text-align: center;
+    }
+    .header-input_search {
+        width: calc(100vw - 40%);
+    }
+    .primary-button {
+        width: calc(100vw - 80%);
+    }
+}
