@@ -19,7 +19,7 @@ export class DetailComponent implements OnInit {
 
   checkPokemon(id: number) {
     this.pokemon = {...this.pokemon, checked: true};
-    const favItems: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') ?? '');
+    const favItems: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
     localStorage.setItem('favoritesPokemons', JSON.stringify([...favItems, id]));
     this.appService.runGetFavCount();
   }

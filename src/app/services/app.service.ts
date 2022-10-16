@@ -22,7 +22,7 @@ export class AppService {
     }
 
     runGetFavCount() {
-      const favs: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') ?? '');
+      const favs: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
       return this.favCount.next(favs.length);
     }
 }
