@@ -29,12 +29,7 @@ export class AppService {
   getLocalStorage() {
     let favItems: number[] = [];
     try {
-      const localStorageData = localStorage.getItem('favoritesPokemons');
-      if(!localStorageData) {
-        localStorage.setItem('favoritesPokemons', JSON.stringify([]));
-      } else {
-        favItems = JSON.parse(localStorageData || '');
-      }
+      favItems = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
     } catch (err) {
       console.error('error', err);
     }
