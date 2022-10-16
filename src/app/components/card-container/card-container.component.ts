@@ -14,23 +14,24 @@ export class CardContainerComponent implements OnInit {
   pokemons: PokemonData[] = [];
   maxItems: number = 12;
   hideButton: boolean = false;
+  viewSelected: View = 'list';
 
   constructor(
     private pokeService: PokeApiService,
     private appService: AppService) { }
 
   ngOnInit() {
-    this.getData('list');
-    this.appService.viewSelected.subscribe((value) => this.getData(value));
+    this.appService.viewSelected.subscribe((value) => this.viewSelected = value);
+    this.getData();
   }
 
-  getData(value: View) {
+  getData() {
     this.pokemons = [];
     const favItems = this.appService.getLocalStorage();
-    if (value === 'list') {
+    if (this.viewSelected === 'list') {
       this.getListData(favItems);
     }
-    if (value === 'favorites') {
+    if (this.viewSelected === 'favorites') {
       this.hideButton = true;
       this.getFavstData(favItems);
     }
@@ -39,7 +40,7 @@ export class CardContainerComponent implements OnInit {
 
   getMoreData() {
     this.maxItems = this.maxItems + 12;
-    this.getData('list');
+    this.getData();
     setTimeout(() => {
       window.scrollTo(0, document.body.scrollHeight);
     }, 100);

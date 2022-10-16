@@ -21,11 +21,6 @@ export class AppService {
     return this.pokemonDetail.next(pokemon);
   }
 
-  runGetFavCount() {
-    let favItems: number[] = this.getLocalStorage();
-    return this.favCount.next(favItems.length);
-  }
-
   getLocalStorage() {
     let favItems: number[] = [];
     try {
@@ -35,4 +30,10 @@ export class AppService {
     }
     return favItems;
   }
+
+  runGetFavCount() {
+    let favItems: number[] = this.getLocalStorage();
+    return this.favCount.next(favItems.length);
+  }
+
 }

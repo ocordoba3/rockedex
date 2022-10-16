@@ -19,5 +19,6 @@ export class AppComponent implements OnInit {
     localStorage.setItem('favoritesPokemons', JSON.stringify([]));
     this.appService.viewSelected.subscribe((value) => this.viewSelected = value);
     this.appService.pokemonDetail.subscribe((pokemon) => this.pokemon = pokemon);
+    this.appService.runRefresView('list');
   }
 }
