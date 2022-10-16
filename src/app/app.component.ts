@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   viewSelected: View = 'list';
   pokemon: PokemonData = new PokemonData();
-  logo: string = 'assets/logo.svg';
+  logo: string = './assets/logo.svg';
 
   constructor(private appService: AppService) { }
 
