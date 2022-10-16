@@ -13,16 +13,26 @@ export class AppService {
   public pokemonDetail: Subject<PokemonData> = new Subject<PokemonData>();
   public favCount: Subject<number> = new Subject<number>();
 
-    runRefresView(value: View) {
-        return this.viewSelected.next(value);
-    }
+  runRefresView(value: View) {
+    return this.viewSelected.next(value);
+  }
 
-    runPokemonDetail(pokemon: PokemonData) {
-      return this.pokemonDetail.next(pokemon);
-    }
+  runPokemonDetail(pokemon: PokemonData) {
+    return this.pokemonDetail.next(pokemon);
+  }
 
-    runGetFavCount() {
-      const favs: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
-      return this.favCount.next(favs.length);
+  runGetFavCount() {
+    let favItems: number[] = this.getLocalStorage();
+    return this.favCount.next(favItems.length);
+  }
+
+  getLocalStorage() {
+    let favItems: number[] = [];
+    try {
+      favItems = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
+    } catch (err) {
+      console.error('error', err);
     }
+    return favItems;
+  }
 }

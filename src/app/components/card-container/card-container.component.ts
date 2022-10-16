@@ -25,9 +25,9 @@ export class CardContainerComponent implements OnInit {
   }
 
   getData(value: View) {
-    const favItems: number[] = JSON.parse(localStorage.getItem('favoritesPokemons') || '');
     this.pokemons = [];
-    if(value === 'list') {
+    const favItems = this.appService.getLocalStorage();
+    if (value === 'list') {
       this.getListData(favItems);
     }
     if (value === 'favorites') {
