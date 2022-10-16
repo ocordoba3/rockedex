@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService, View } from './services/app.service';
 import { PokemonData } from './models/response';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
 
   viewSelected: View = 'list';
   pokemon: PokemonData = new PokemonData();
-  logo: string = './assets/logo.svg';
+  logo: string = environment.logoUrl;
   loading: boolean = true;
 
   constructor(private appService: AppService) { }

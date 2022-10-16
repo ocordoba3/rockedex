@@ -38,10 +38,10 @@ export class PkmTopBarComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.appService.favCount.subscribe((value) => this.favItems = value );
-    // setTimeout(() => {
-    //   this.appService.runGetFavCount();
-    // }, 500);
+    setTimeout(() => {
+      this.appService.favCount.subscribe((value) => this.favItems = value );
+      this.appService.runGetFavCount();
+    }, 500);
   }
 
   goToFavs() {
