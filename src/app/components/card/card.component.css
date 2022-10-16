@@ -5,7 +5,7 @@
     position: relative;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
     .card {
         padding: 1.2rem;
     }

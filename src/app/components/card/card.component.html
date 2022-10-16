@@ -2,12 +2,12 @@
     <PkmFavButton (click)="checkPokemon(pokemon.id)" [checked]="pokemon.checked"></PkmFavButton>
     <div class="row">
         <div class="col-md-4 d-flex justify-content-center aling-items-center p-0">
-            <img [src]="pokemon.sprites.front_default" class="card-image img-fluid rounded-start"
-                [alt]="pokemon.name" (click)="goToDetail(pokemon)">
+            <img [src]="pokemon.sprites.front_default" class="card-image img-fluid rounded-start" [alt]="pokemon.name"
+                (click)="goToDetail(pokemon)">
         </div>
         <div class="col-md-8">
             <div class="card-body p-0">
-                <p>{{changeId(pokemon.id)}}</p>
+                <p>{{pokemon.id | transformId}}</p>
                 <h2><b>{{pokemon.name | titlecase}}</b></h2>
                 <div class="row d-flex m-0">
                     <span *ngFor="let item of pokemon?.types" class="card-badge">{{item?.type?.name | titlecase}}</span>

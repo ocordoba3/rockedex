@@ -22,7 +22,7 @@ import { AppService } from '../../../../src/app/services/app.service';
         justify-content: space-between;
         padding: 2rem 2.4rem; 
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
         .navbar {
             padding: 1.8rem;
         }

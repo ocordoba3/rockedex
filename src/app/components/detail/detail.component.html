@@ -11,7 +11,7 @@
         </div>
         <h3 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam, aspernatur iusto
           pariatur assumenda officia maxime eum dolores nostrum velit.</h3>
-        <h3><b>ID:</b> {{changeId(pokemon.id)}}</h3>
+        <h3><b>ID:</b> {{pokemon.id | transformId}}</h3>
         <h3><b>Altura:</b> {{pokemon.height}}</h3>
         <h3><b>Peso:</b> {{pokemon.weight}}</h3>
         <PkmButton 

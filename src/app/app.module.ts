@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PkmButtonModule } from 'projects/pkm-button/src/public-api';
 import { PkmFavButtonModule } from '../../projects/pkm-fav-button/src/lib/pkm-fav-button.module';
 import { PkmTopBarModule } from '../../projects/pkm-top-bar/src/lib/pkm-top-bar.module';
+import { TransformIdPipe } from './pipes/transform-id.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PkmTopBarModule } from '../../projects/pkm-top-bar/src/lib/pkm-top-bar.
     CardContainerComponent,
     CardComponent,
     DetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    TransformIdPipe
   ],
   imports: [
     BrowserModule,

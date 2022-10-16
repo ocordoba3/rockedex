@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { transformId } from 'src/app/helpers/transformId';
 import { AppService } from 'src/app/services/app.service';
 import { PokemonData } from '../../models/response';
 
@@ -21,10 +20,6 @@ export class CardComponent implements OnInit {
   goToDetail(pokemon: PokemonData) {
     this.appService.runRefresView('detail');
     this.appService.runPokemonDetail(pokemon);
-  }
-
-  changeId(id: number = 0) {
-    return transformId(id);
   }
 
   checkPokemon(id: number | undefined) {

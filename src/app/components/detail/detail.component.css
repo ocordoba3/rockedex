@@ -9,7 +9,7 @@
     margin: 1.6rem .5rem 1.6rem 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
     .detail-container {
         padding: 0rem 1.8rem 2.5rem 1.8rem;
     }
