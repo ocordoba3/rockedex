@@ -1,4 +1,6 @@
-<PkmTopBar [logo]="logo"></PkmTopBar>
-<app-header ></app-header>
-<app-card-container *ngIf="viewSelected === 'list' || viewSelected === 'favorites'"></app-card-container>
-<app-detail *ngIf="viewSelected === 'detail'" [pokemon]="pokemon"></app-detail>
+<div *ngIf="!loading">
+    <PkmTopBar [logo]="logo"></PkmTopBar>
+    <app-header ></app-header>
+    <app-card-container *ngIf="viewSelected === 'list' || viewSelected === 'favorites'"></app-card-container>
+    <app-detail *ngIf="viewSelected === 'detail'" [pokemon]="pokemon"></app-detail>
+</div>
