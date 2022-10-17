@@ -21,14 +21,18 @@ export class CardContainerComponent implements OnInit {
     private appService: AppService) { }
 
   ngOnInit() {
-    this.appService.viewSelected.subscribe((value) => this.viewSelected = value);
     this.getData();
+    this.appService.viewSelected.subscribe((value) => {
+      this.viewSelected = value;
+      this.getData()
+    });
   }
 
   getData() {
     this.pokemons = [];
     const favItems = this.appService.getLocalStorage();
     if (this.viewSelected === 'list') {
+      this.hideButton = false;
       this.getListData(favItems);
     }
     if (this.viewSelected === 'favorites') {
